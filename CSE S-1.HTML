@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSE Semester 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📐 CSE - Semester 1</h1>
+  </header>
+
+  <main>
+    <section class="question-papers1">
+  <h2>📝 Question Papers</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEQuestions" style="display:none" />
+
+  <ul id="CSEQuestionList">
+    <li>
+      * Question Paper
+      <a href="uploads/CSE/Captian.txt" download>
+        <button>Download</button>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+
+    <section class="study-materials1">
+  <h2>📂 Study Materials</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEMaterials" style="display:none" />
+
+  <ul id="CSEMaterialList">
+     
+     <li>
+      * Study Material
+      <a href="uploads/AI&ML/ARTIFICIAL-INTELLIGENCE-DEC-2023.pdf" download>
+        <button>Download</button>
+      
+      </a>
+    </li>
+  </ul>
+</section>
+  </main>
+
+  <script>
+    function uploadFile(subject) {
+      const username = prompt("Enter username:");
+      const password = prompt("Enter password:");
+      if (username === "studenthub@2025" && password === "student@2025") {
+        alert("✅ You can now choose your file to upload (simulated)");
+        // Simulate file upload UI
+        document.getElementById(subject + "Questions").click();
+        document.getElementById(subject + "Materials").click();
+      } else {
+        alert("❌ Unauthorized. Upload blocked.");
+      }
+    }
+  </script>
+</body>
+</html>
